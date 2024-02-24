@@ -1,1 +1,18 @@
-change test
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "iphone 12 pro",
+      "price": 3000.0,
+      "category": "Phone",
+      "imagePath": "../../assets/images/product.jpg"
+    },
+    {
+      "id": "2",
+      "name": "iphone 15 pro max",
+      "price": 7000.0,
+      "category": "Pc",
+      "imagePath": "../../assets/images/product.jpg"
+    }
+  ]
+}

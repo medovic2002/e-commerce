@@ -1,0 +1,37 @@
+<div class="container">
+  <nav aria-label="breadcrumb" class="main-nav">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Shop</li>
+    </ol>
+  </nav>
+  <div class="shop">
+    <div class="category">
+      <h5>Category</h5>
+      <div class="list-group">
+        <button
+          type="button"
+          class="list-group-item list-group-item-action active"
+          aria-current="true"
+        >
+          All
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">
+          A second button item
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">
+          A third button item
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">
+          A fourth button item
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">
+          A fiveth button item
+        </button>
+      </div>
+    </div>
+    <div class="list-product">
+      <app-card *ngFor="let item of product" [product]="item"></app-card>
+    </div>
+  </div>
+</div>

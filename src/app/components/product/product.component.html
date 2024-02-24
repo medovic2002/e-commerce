@@ -1,0 +1,50 @@
+<div class="container">
+  <nav aria-label="breadcrumb" class="main-nav" style="margin-top: 30px">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item"><a routerLink="/shop">Shop</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ id }}</li>
+    </ol>
+  </nav>
+  <h4 style="margin: 20px 0">Product details</h4>
+  <div class="product">
+    <div class="product-image">
+      <img src="../../assets/images/product.jpg" />
+    </div>
+    <div class="product-detail">
+      <h4>{{ product.name }}</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque
+        in repellendus optio animi eum rem earum repudiandae voluptas
+        deleniti.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Itaque cumque in repellendus optio animi eum rem earum repudiandae
+        voluptas deleniti.
+      </p>
+      <div style="display: flex; gap: 20px">
+        <div class="mb-3" style="width: 100%">
+          <label for="exampleInputEmail1" class="form-label">Color</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="mb-3" style="width: 100%">
+          <label for="exampleInputEmail1" class="form-label">Stockage</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <h3 style="font-weight: bold">{{ product.price.toFixed(2) }} DH</h3>
+      <button type="button" class="btn btn-primary" style="width: 100%">
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>

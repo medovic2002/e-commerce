@@ -1,0 +1,10 @@
+<div class="card" style="width: 14rem">
+  <a routerLink="/shop/{{ product.id + '-' + product.name }}"
+    ><img src="{{ product.imagePath }}" class="card-img-top" alt="product"
+  /></a>
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.price }} DH</p>
+    <button class="btn btn-primary" style="width: 100%">Add to cart</button>
+  </div>
+</div>
