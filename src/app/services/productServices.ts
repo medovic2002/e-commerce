@@ -4,20 +4,26 @@ import { Product } from "../interfaces/Product";
 
 @Injectable({
     providedIn: 'root',
-   })
+})
 export class ProductServices{
 
     products : Product [] = [] ;
     product : Product = {} as Product 
-    constructor(private http:HttpClient ){
+    productCategorie : string[] = []
+
+    constructor(private http:HttpClient){
     }
     
     private getProductsAPI(){
         this.products = []
-        this.http.get<[]>("http://localhost:3000/products").subscribe(data=>{
-            data.map((item)=>{
-                this.products.push(item)
-            })
+        this.http.get<Product[]>("http://localhost:3000/products").subscribe(data =>{
+            for(let elem of data){
+                this.products.push(elem)
+                if(!this.productCategorie.includes(elem.category)){
+                    this.productCategorie.push(elem.category)
+                }
+                
+            }  
         });
     }
 
@@ -26,18 +32,26 @@ export class ProductServices{
         return this.products
     }
 
+    getProductsCategorie(){
+        return this.productCategorie
+    }
+
     private getProductByIdAPI(id:number){
-        console.log("insideApi")
         this.http.get<Product>("http://localhost:3000/products/"+id).subscribe((data)=>{
-            this.product = data
-            console.log("api "+this.product)
+            this.product.id  = data.id
+            this.product.name  = data.name
+            this.product.price  = data.price
+            this.product.imagePath  = data.imagePath
+            this.product.category  = data.category
+            this.product.color = data.color
+            this.product.stockage = data.stockage
+            this.product.description = data.description
+            
         });
     }
 
     getById(id:number){
-        this.getProductByIdAPI(id);
-        console.log("inside methode")
-        console.log("methode "+this.product)
+        this.getProductByIdAPI(id); 
         return this.product;
     }
 

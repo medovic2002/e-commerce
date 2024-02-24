@@ -5,14 +5,40 @@
       "name": "iphone 12 pro",
       "price": 3000.0,
       "category": "Phone",
-      "imagePath": "../../assets/images/product.jpg"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque in repellendus optio animi eum rem earum repudiandae voluptas deleniti.Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "imagePath": "../../assets/images/product.jpg",
+      "color": ["Gray", "Red", "Gold"],
+      "stockage": ["128 GB", "256 GB", "512 GB"]
     },
     {
       "id": "2",
       "name": "iphone 15 pro max",
       "price": 7000.0,
+      "category": "Phone",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque in repellendus optio animi eum rem earum repudiandae voluptas deleniti.Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "imagePath": "../../assets/images/product.jpg",
+      "color": ["Titanium", "Darkblue", "Gold"],
+      "stockage": ["128 GB", "256 GB", "512 GB"]
+    },
+    {
+      "id": "3",
+      "name": "MacBook M1",
+      "price": 17000.0,
       "category": "Pc",
-      "imagePath": "../../assets/images/product.jpg"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque in repellendus optio animi eum rem earum repudiandae voluptas deleniti.Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "imagePath": "../../assets/images/product.jpg",
+      "color": ["Titanium", "Darkblue", "Gold"],
+      "stockage": ["128 GB", "256 GB", "512 GB"]
+    },
+    {
+      "id": "4",
+      "name": "Asus",
+      "price": 8000.0,
+      "category": "Pc",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque in repellendus optio animi eum rem earum repudiandae voluptas deleniti.Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "imagePath": "../../assets/images/product.jpg",
+      "color": ["Bluciel", "Darkblue", "Gold"],
+      "stockage": ["128 GB", "256 GB", "512 GB"]
     }
   ]
 }

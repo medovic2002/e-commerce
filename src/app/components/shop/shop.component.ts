@@ -10,12 +10,13 @@ import { ProductServices } from 'src/app/services/productServices';
 export class ShopComponent implements OnInit{
 
   product : Product[] = []
-
+  productCategorie : string[] = []
   constructor(private productService:ProductServices){
   }
 
   ngOnInit() {
     this.product = this.productService.getProducts();
+    this.productCategorie = this.productService.getProductsCategorie();
   }
 
   

@@ -11,15 +11,12 @@ import { ProductServices } from 'src/app/services/productServices';
 export class ProductComponent implements OnInit{
 
   product !: Product 
-  id = this.activatedRoute.snapshot.params['productID'].split("-")[1];
 
   constructor(private activatedRoute: ActivatedRoute,private productService:ProductServices) { }
 
   ngOnInit() {
     let id = +this.activatedRoute.snapshot.params['productID'].split("-")[0];
-    console.log("before")
     this.product = this.productService.getById(id);
-    console.log("after")
   }
 
 }
